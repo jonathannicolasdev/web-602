@@ -27,6 +27,7 @@ pic.classList.add("round");
 // Right now we are toggling the round class manually ,let's use the click event
 
 // First let's create a function toggleRound() which runs
+// pic.classList.remove("round");
 // pic.classList.toggle("round");
 
 function toggleRound() {

@@ -34,7 +34,25 @@ console.log(myDiv);
 //Now we need to append all of this to an element already existing in html
 // We will be using appendChild()
 const body = document.querySelector("body");
+
 body.appendChild(myDiv);
 
 myDiv.appendChild(myParagrah);
 myDiv.appendChild(myImage);
+
+const heading = document.createElement("h1");
+heading.innerHTML = "I forgot to put a heading";
+myDiv.insertAdjacentElement("beforebegin", heading);
+
+// An exercise on creating an ul list
+
+const list = document.createElement("ul");
+const li = document.createElement("li");
+li.innerHTML = "First item on the list";
+list.appendChild(li);
+
+document.body.appendChild(list);
+
+const li2 = document.createElement("li");
+li2.innerHTML = "Second item on the list";
+list.appendChild(li2);

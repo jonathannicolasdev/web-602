@@ -23,4 +23,6 @@ console.log(p);
 // 'beforeend': Just inside the element, after its last child.
 // 'afterend': After the element itself.
 
-p.insertAdjacentText("afterend", " blablablablabla ");
+//https://developer.mozilla.org/en-US/docs/Web/API/Element
+//developer.mozilla.org/en-US/docs/Web/API/Element
+https: p.insertAdjacentHTML("afterend", " blablablablabla ");

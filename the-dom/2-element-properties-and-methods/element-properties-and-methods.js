@@ -41,4 +41,4 @@ console.log(p);
 // 'beforeend': Just inside the element, after its last child.
 // 'afterend': After the element itself.
 
-p.insertAdjacentText("afterend", " try changing the position ");
+p.insertAdjacentText("afterend", "try changing the position");
