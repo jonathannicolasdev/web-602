@@ -1,0 +1,14 @@
+body {
+  background-color: lightgray;
+}
+.wrapper {
+  height: 100vh;
+  width: 800px;
+  background-color: white;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.recipe {
+  text-align: center;
+}
