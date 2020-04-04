@@ -1,0 +1,12 @@
+.wrapper {
+  width: 880px;
+  height: 100vh;
+  background-color: lightgray;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.inside-wrapper {
+  margin: 20px;
+  text-align: center;
+}
