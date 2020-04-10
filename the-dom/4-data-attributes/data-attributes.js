@@ -17,6 +17,7 @@ console.log(pic.alt);
 // We can also set the width of the picture
 
 pic.width = 500;
+console.log(pic.width);
 
 // Now if you instert an error in  src="https://source.unsplash.com/random/600x600"
 // and reload, no image will appear but the alt text attribute

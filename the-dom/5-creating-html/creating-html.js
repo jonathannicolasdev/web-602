@@ -49,7 +49,7 @@ const heading = document.createElement("h1");
 heading.innerHTML = "I forgot to put a heading";
 
 // Let's insert inside the DOM
-myDiv.insertAdjacentElement("afterbegin", heading);
+myDiv.insertAdjacentElement("afterend", heading);
 
 // An exercise on creating an ul list
 const list = document.createElement("ul");
