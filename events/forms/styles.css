@@ -1,0 +1,19 @@
+body {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: white;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+  display: block;
+  padding: 1rem;
+  border: 1px solid grey;
+}
