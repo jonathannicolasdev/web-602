@@ -50,8 +50,6 @@ const myHTML = `
   <div>
 `;
 
-
-
 const ulElement = div.querySelector("ul");
 console.log(ulElement);
 console.log(myHTML);
@@ -99,6 +97,7 @@ cardsHTML += generatePlayerCard("kait", 12, 150);
 cardsHTML += generatePlayerCard("snickers", 12, 150);
 
 cards.innerHTML = cardsHTML;
+
 
 // append those cards to the div
 // put the div into the DOM just before the wrapper element
