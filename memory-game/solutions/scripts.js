@@ -10,11 +10,14 @@ let hasFlippedCard = false;
 let firstCard, secondCard;
 
 function flipCard() {
+  //access the classList of the memory card
   this.classList.toggle("flip");
   // console.log("hello");
+  //Let's see what in this ctx this keyword represents
   // console.log(this);
   if (!hasFlippedCard) {
     hasFlippedCard = true;
+    //the element that has fired the event
     firstCard = this;
   } else {
     hasFlippedCard = false;
@@ -24,6 +27,17 @@ function flipCard() {
     // we can add a data attribute to our element
     console.log(firstCard.dataset.pokemon);
     console.log(secondCard.dataset.pokemon);
+
+    if (firstCard.dataset.pokemon === secondCard.dataset.pokemon) {
+      console.log("yes they are the same");
+      firstCard.removeEventListener("click", flipCard);
+      secondCard.removeEventListener("click", flipCard);
+    } else {
+      setTimeout(function () {
+        firstCard.classList.remove("flip");
+        secondCard.classList.remove("flip");
+      }, 3000);
+    }
   }
 
   // console.log({ hasFlippedCard, firstCard });
