@@ -27,17 +27,7 @@ function flipCard() {
     // we can add a data attribute to our element
     console.log(firstCard.dataset.pokemon);
     console.log(secondCard.dataset.pokemon);
-
-    if (firstCard.dataset.pokemon === secondCard.dataset.pokemon) {
-      console.log("yes they are the same");
-      firstCard.removeEventListener("click", flipCard);
-      secondCard.removeEventListener("click", flipCard);
-    } else {
-      setTimeout(function () {
-        firstCard.classList.remove("flip");
-        secondCard.classList.remove("flip");
-      }, 3000);
-    }
+    checkForMatch();
   }
 
   // console.log({ hasFlippedCard, firstCard });
@@ -46,6 +36,34 @@ function flipCard() {
 // Loop through that list of cards and to each one of the cards we will attach
 // an event listener, we will listen for a click event and when that event is fired
 // we will execute a function names flipcard
+
+function checkForMatch() {
+  if (firstCard.dataset.pokemon === secondCard.dataset.pokemon) {
+    console.log("yes they are the same");
+    disableCards();
+  } else {
+    unflipCards();
+  }
+}
+
+function disableCards() {
+  firstCard.removeEventListener("click", flipCard);
+  secondCard.removeEventListener("click", flipCard);
+}
+
+function unflipCards() {
+  setTimeout(function () {
+    firstCard.classList.remove("flip");
+    secondCard.classList.remove("flip");
+  }, 3000);
+}
+
+(function shuffle() {
+  cards.forEach(function (card) {
+    let randomPos = Math.floor(Math.random() * 12);
+    card.style.order = randomPos;
+  });
+})();
 
 cards.forEach(function (card) {
   card.addEventListener("click", flipCard);
