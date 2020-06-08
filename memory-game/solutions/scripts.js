@@ -13,7 +13,7 @@ function flipCard() {
   //access the classList of the memory card
   this.classList.toggle("flip");
   // console.log("hello");
-  //Let's see what in this ctx this keyword represents
+  // Let's see what in this ctx this keyword represents
   // console.log(this);
   if (!hasFlippedCard) {
     hasFlippedCard = true;
